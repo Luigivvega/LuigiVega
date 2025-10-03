@@ -1,0 +1,43 @@
+/* Definimos variables de color para usarlas fácilmente en toda la página */
+:root {
+    --color-principal: #1b998b; /* Verde Azulado */
+    --color-secundario: #B9BAA3; /* Gris Claro / Tierra */
+    --color-fondo: #2d3047; /* Azul Marino Oscuro */
+    --color-texto-claro: #ffffff; /* Blanco */
+    --color-texto-oscuro: #2d3047; /* Texto principal (oscuro) */
+}
+
+/* 1. Estilo Básico para todo el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Cambiamos la fuente para que se vea mejor */
+    background-color: var(--color-fondo); /* Usamos tu color más oscuro como fondo */
+    color: var(--color-texto-claro); /* El texto principal será blanco para contrastar */
+    line-height: 1.6; /* Hace el texto más legible */
+    padding: 20px;
+}
+
+/* 2. Estilo de los encabezados (tu nombre) */
+h1 {
+    color: var(--color-principal); /* Usamos tu color principal para el nombre */
+    border-bottom: 2px solid var(--color-principal); /* Añadimos una línea debajo del nombre */
+    padding-bottom: 10px;
+}
+
+/* 3. Estilo de las secciones de proyectos */
+article {
+    background-color: #3e425f; /* Un tono ligeramente más claro que el fondo para que resalte */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* 4. Estilo para los enlaces (como los links a tus proyectos) */
+a {
+    color: var(--color-secundario); /* Usamos tu color gris claro para los enlaces */
+    text-decoration: none; /* Quitamos el subrayado */
+}
+
+a:hover {
+    color: var(--color-principal); /* Cambia de color cuando pasas el ratón */
+    text-decoration: underline;
+}
