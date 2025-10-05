@@ -108,33 +108,32 @@ a:hover {
 }
 
 .card {
-    background-color: #3e425f; /* Fondo de tarjeta */
-    padding: 30px;
-    border-radius: 12px;
+    /* ... código existente ... */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s;
+    /* ¡Asegúrate de tener esta línea para un movimiento suave! */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+    transform: translateY(-5px); /* Se eleva 5px */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* La sombra se hace más grande */
 }
 
 /* Estilo para los botones de acción */
+/* Para botones y enlaces (call-to-action-btn) */
 .call-to-action-btn {
-    display: inline-block;
-    background-color: var(--color-principal);
-    color: var(--color-fondo);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s;
+    /* ... código existente ... */
+    transition: background-color 0.3s, transform 0.2s; /* Añadir transition para un movimiento suave */
 }
 
 .call-to-action-btn:hover {
     background-color: var(--color-secundario);
     color: var(--color-fondo);
+    transform: scale(1.05); /* Crece un 5% */
+}
+
+.call-to-action-btn:active {
+    transform: scale(0.95); /* Se encoge un 5% al hacer clic (efecto 'presionado') */
 }
 
 /* ==================================== */
@@ -148,11 +147,14 @@ a:hover {
 }
 
 .project-summary {
-    background-color: #3e425f;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-left: 5px solid var(--color-principal); /* Barra lateral para destacar */
-    border-radius: 8px;
+    /* ... código existente ... */
+    transition: transform 0.3s ease, border-left-width 0.3s ease; /* Transición suave */
+    cursor: pointer; /* Indica que es clickable */
+}
+
+.project-summary:hover {
+    transform: translateX(10px); /* Se desliza 10px a la derecha */
+    border-left-width: 10px; /* La barra lateral se hace más gruesa */
 }
 
 .status {
@@ -219,4 +221,26 @@ a:hover {
     .project-repo-btn {
         width: 100%;
     }
+}
+
+/* ==================================== */
+/* 3. Animación de Entrada (Fade-In) */
+/* ==================================== */
+
+/* Define la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Empieza invisible */
+        transform: translateY(15px); /* Ligeramente desplazado hacia abajo */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+        transform: translateY(0); /* Vuelve a su posición normal */
+    }
+}
+
+/* Aplica la animación al cuerpo de la página */
+body {
+    /* ... código body existente ... */
+    animation: fadeIn 1s ease-out both;
 }
