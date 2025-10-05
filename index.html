@@ -6,7 +6,15 @@
 </head>
 <body>
 
-<header>
+<nav class="main-nav">
+    <a href="index.html" class="nav-item">Inicio</a>
+    <a href="#mision" class="nav-item">Mi Misión</a>
+    <a href="#proyectos" class="nav-item">Proyectos</a>
+    <a href="viajes.html" class="nav-item">Viajes</a>
+    <a href="#contacto" class="nav-item contact-btn">Contacto</a>
+</nav>
+
+<header class="hero">
     <h1>Hola, soy Luigi Velázquez Vega.</h1>
     <h2>Líder Creativo y Apasionado por el Desarrollo Personal</h2> 
     <p>¡Bienvenido/a! Este es mi espacio para compartir experiencias de vida, viajes, consejos y proyectos que me apasionan (como la creación de este sitio).</p>
@@ -14,58 +22,59 @@
 </header>
     
 <main class="content-section">
-        <div class="card mission-card">
-            <h2>MI MISIÓN DE VIDA</h2>
-                <p>En la actualidad, muchos creen que el éxito se mide por el dinero, la popularidad o las mejores calificaciones, entre otras cosas.</p>   
-                <p>Mi misión no es demostrarte que hay un solo camino al éxito, sino compartirte mi punto de vista de manera creativa.</p>
-                <p>Lo que busco es enseñarte una parte de mí, y así construir una relación entre nosotros más cercana, esperando que 
-                <p>mi historia sea un punto de apoyo e inspiración en tu propia vida.</p>
-        </div>
+    <div class="card mission-card" id="mision">
+        <h2>MI MISIÓN DE VIDA</h2>
+        <p>En la actualidad, muchos creen que el éxito se mide por el dinero, la popularidad o las mejores calificaciones, entre otras cosas.</p> 
+        <p>Mi misión no es demostrarte que hay un solo camino al éxito, sino compartirte mi punto de vista de manera creativa.</p>
+        <p>Lo que busco es enseñarte una parte de mí, y así construir una relación entre nosotros más cercana, esperando que mi historia sea un punto de apoyo e inspiración en tu propia vida.</p>
+    </div>
         
-        <div class="card">
-            <h2>EL ENFOQUE DE LUIGIVVEGA</h2>
-            <ul>
-                <li>Te enseñaré a ser tu propia prioridad.</li>
-                <li>Demostrandote que el error es un gran maestro.</li>
-                <li>Y te enfocaré en lo que realmente importa: el presente.</li>
-            </ul>
-            <button class="call-to-action">DESCUBRE CÓMO</button>
-        </div>
-    </main>
-    
-    <hr> <section id="proyectos">
-        <h2>Mis Proyectos Recientes</h2>
-        
-        <article>
-            <h3>[Nombre de tu Proyecto 1]</h3>
-            <p>Descripción breve: ¿Qué problema resuelve este proyecto y qué tecnología usaste? (Ejemplo: Un analizador de datos en Python para mi trabajo).</p>
-            <p>Estado: Terminado / En curso.</p>
-            <a href="[Link a tu repositorio o demo]" target="_blank">Ver Proyecto en GitHub</a>
-        </article>
-
-        <article>
-            <h3>[Nombre de tu Proyecto 2]</h3>
-            <p>Descripción breve: Por ejemplo, un sitio web con WordPress o una aplicación móvil.</p>
-            <p>Estado: En curso.</p>
-        </article>
-
-    </section>
-
-    <hr>
-
-    <section id="contacto">
-        <h2>Hablemos</h2>
-        <p>¿Te interesa colaborar o conocerme mejor? Conéctate conmigo en:</p>
-        <ul>
-            <li>**GitHub:** <a href="https://github.com/LuigiVega" target="_blank">Mi Perfil</a></li>
-            <li>**LinkedIn:** [Tu link de LinkedIn]</li>
-            <li>**Correo:** [Tu correo electrónico]</li>
+    <div class="card enfoque-card">
+        <h2>EL ENFOQUE DE LUIGIVVEGA</h2>
+        <ul class="enfoque-list">
+            <li>Te enseñaré a ser tu propia prioridad.</li>
+            <li>Demostrándote que el error es un gran maestro.</li>
+            <li>Y te enfocaré en lo que realmente importa: el presente.</li>
         </ul>
-    </section>
+        <a href="#contacto" class="call-to-action-btn">DESCUBRE CÓMO</a>
+    </div>
+</main>
+    
+<hr> 
+<section id="proyectos" class="proyectos-section">
+    <h2>Mis Proyectos Recientes</h2>
+        
+    <article class="project-summary">
+        <h3>Mi Primer Proyecto Web (Este Sitio)</h3>
+        <p>Descripción breve: Un ejercicio de branding personal y desarrollo web estático para crear un almacén de proyectos de vida.</p>
+        <p class="status">Estado: Terminado y en constante evolución.</p>
+        <a href="proyecto-1.html" class="project-link">VER PROYECTO COMPLETO</a>
+    </article>
 
-    <footer>
-        <p>&copy; 2024 Luigi Velazquez Vega. Hecho con ❤️ y GitHub Pages.</p>
-    </footer>
+    <article class="project-summary">
+        <h3>[Nombre de tu Proyecto 2]</h3>
+        <p>Descripción breve: Por ejemplo, un sitio web con WordPress o una aplicación móvil.</p>
+        <p class="status">Estado: En curso.</p>
+        <a href="#" class="project-link" target="_blank">Ver Repositorio</a>
+    </article>
+
+</section>
+
+<hr>
+
+<section id="contacto" class="contacto-section">
+    <h2>Hablemos</h2>
+    <p>¿Te interesa colaborar o conocerme mejor? Conéctate conmigo en:</p>
+    <ul class="contact-list">
+        <li>**GitHub:** <a href="https://github.com/LuigiVega" target="_blank">Mi Perfil</a></li>
+        <li>**LinkedIn:** [Tu link de LinkedIn]</li>
+        <li>**Correo:** [Tu correo electrónico]</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Luigi Velazquez Vega. Hecho con ❤️ y GitHub Pages.</p>
+</footer>
 
 </body>
 </html>
