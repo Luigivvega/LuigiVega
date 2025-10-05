@@ -244,3 +244,25 @@ body {
     /* ... código body existente ... */
     animation: fadeIn 1s ease-out both;
 }
+
+/* ==================================== */
+/* Estilo para Videos Responsivos */
+/* ==================================== */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
