@@ -41,3 +41,182 @@ a:hover {
     color: var(--color-principal); /* Cambia de color cuando pasas el ratón */
     text-decoration: underline;
 }
+
+/* ==================================== */
+/* 1. Estilos de Navegación (Menú) */
+/* ==================================== */
+
+.main-nav {
+    display: flex;
+    justify-content: center; /* Centra los botones del menú */
+    background-color: var(--color-fondo);
+    padding: 15px 0;
+    position: sticky; /* Fija el menú en la parte superior al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+}
+
+/* ==================================== */
+/* 2. Estilos de la cabecera (HERO) */
+/* ==================================== */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #3e425f; /* Un tono más claro para la cabecera */
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    color: var(--color-principal);
+    border-bottom: none;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+/* ==================================== */
+/* 3. Diseño de Secciones (Tarjetas / Cards) */
+/* ==================================== */
+
+.content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las tarjetas */
+    gap: 30px;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #3e425f; /* Fondo de tarjeta */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+}
+
+/* Estilo para los botones de acción */
+.call-to-action-btn {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.call-to-action-btn:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+
+/* ==================================== */
+/* 4. Estilo de Proyectos Resumen */
+/* ==================================== */
+
+.proyectos-section {
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-summary {
+    background-color: #3e425f;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-principal); /* Barra lateral para destacar */
+    border-radius: 8px;
+}
+
+.status {
+    color: var(--color-secundario);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 5. Estilo de PÁGINA DE DETALLE (proyecto-1.html) */
+/* ==================================== */
+
+.project-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.project-detail h1 {
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.project-status {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-secundario);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-description {
+    background-color: #3e425f;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.project-repo-btn {
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Media Query para una columna en móviles */
+@media (max-width: 768px) {
+    .content-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .project-repo-btn {
+        width: 100%;
+    }
+}
