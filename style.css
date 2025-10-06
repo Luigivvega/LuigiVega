@@ -48,22 +48,24 @@ a:hover {
 
 .main-nav {
     display: flex;
-    justify-content: center; /* Centra los botones del menú */
-    background-color: var(--color-fondo);
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo transparente y ligeramente blanco */
+    /* El truco del vidrio: desenfoque */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
     padding: 15px 0;
-    position: sticky; /* Fija el menú en la parte superior al hacer scroll */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra muy sutil, no oscura */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
 }
 
 .nav-item {
+    /* Mantenemos el color del texto y los hover que ya tienes */
     color: var(--color-texto-claro);
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    /* ... otros estilos nav-item ... */
 }
 
 .nav-item:hover {
@@ -107,23 +109,34 @@ a:hover {
     margin: 0 auto;
 }
 
-.card {
-    /* ... código existente ... */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    /* ¡Asegúrate de tener esta línea para un movimiento suave! */
+.card, .project-description, .project-summary {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo muy transparente */
+    /* Aplicamos el desenfoque de nuevo */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 20px; /* ¡Más redondeado, estilo iOS! */
+    /* Sombra y transición sutiles */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde claro sutil */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Se eleva 5px */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* La sombra se hace más grande */
+    transform: translateY(-8px); /* Se eleva un poco más */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra más grande al pasar el ratón */
 }
 
 /* Estilo para los botones de acción */
 /* Para botones y enlaces (call-to-action-btn) */
 .call-to-action-btn {
     /* ... código existente ... */
-    transition: background-color 0.3s, transform 0.2s; /* Añadir transition para un movimiento suave */
+    border-radius: 14px; /* Hacemos los botones más redondeados */
+    font-weight: 600; /* Un poco más de peso a la fuente */
+}
+
+.hero h1 {
+    font-weight: 800; /* Títulos más audaces */
 }
 
 .call-to-action-btn:hover {
