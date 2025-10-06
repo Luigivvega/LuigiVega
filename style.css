@@ -48,24 +48,24 @@ a:hover {
 
 .main-nav {
     display: flex;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08); /* Fondo transparente y ligeramente blanco */
-    /* El truco del vidrio: desenfoque */
+    /* Cambia de 'center' a 'space-between' o 'flex-start' */
+    justify-content: space-between; 
+    
+    background-color: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
-    padding: 15px 0;
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 40px; /* Aumentamos el padding a los lados */
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* Sombra muy sutil, no oscura */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-item {
-    /* Mantenemos el color del texto y los hover que ya tienes */
-    color: var(--color-texto-claro);
-    /* ... otros estilos nav-item ... */
+    /* Eliminamos el margin lateral que ya no es necesario con el padding del nav */
+    margin: 0 5px; 
+    /* ... el resto del código nav-item ... */
 }
 
 .nav-item:hover {
