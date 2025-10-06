@@ -9,7 +9,7 @@ STYLE.CSS FINAL - DISEÑO GLASSMORPHISM (ESTILO iOS/CRISTAL)
 /* ------------------------------------ */
 :root {
     --color-principal: #4666ff; /* Neon Azul vibrante para elementos clave */
-    --color-secundario: #80a6eb; /* Dorado  */
+    --color-secundario: #80a6eb; /* Dorado */
     --color-fondo: #0d0d0d; /* Negro muy suave para el fondo principal (para que se note el blur) */
     --color-texto-claro: #f0f0f0; /* Blanco/Gris muy claro para texto principal */
     --color-texto-oscuro: #f26419; /* naranja */
@@ -78,7 +78,7 @@ h1, h2, h3 {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background-color: var(--color-fondo); /* Usamos el color de fondo para que las tarjetas floten sobre él */
+    background-color: var(--color-fondo);
     margin-bottom: 40px;
 }
 
@@ -125,7 +125,7 @@ h1, h2, h3 {
     padding: 10px 20px;
     border-radius: 10px; /* Bordes redondeados */
     transition: background-color 0.3s, color 0.3s;
-    margin: 0; /* Reseteamos el margin que causaba el problema */
+    margin: 0;
 }
 
 .nav-item:hover {
@@ -227,19 +227,7 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.project-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+/* ELIMINADA: La regla anterior de grid para project-gallery (la que causaba el conflicto) */
 
 .project-repo-btn {
     display: block;
@@ -322,8 +310,10 @@ h1, h2, h3 {
 }
 
 .carrusel-slide img {
-    width: 100%;
-    height: 100%;
+    /* La imagen debe ser flexible dentro del slide */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
     object-fit: cover; /* Cubre el área sin distorsionar */
     border-radius: 20px; /* Bordes redondeados iOS */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
