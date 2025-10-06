@@ -9,7 +9,7 @@ STYLE.CSS FINAL - DISEÑO GLASSMORPHISM (ESTILO iOS/CRISTAL)
 /* ------------------------------------ */
 :root {
     --color-principal: #4666ff; /* Neon Azul vibrante para elementos clave */
-    --color-secundario: #F75676; /* Dorado  */
+    --color-secundario: #5716d7; /* Dorado  */
     --color-fondo: #0d0d0d; /* Negro muy suave para el fondo principal (para que se note el blur) */
     --color-texto-claro: #f0f0f0; /* Blanco/Gris muy claro para texto principal */
     --color-texto-oscuro: #f26419; /* naranja */
