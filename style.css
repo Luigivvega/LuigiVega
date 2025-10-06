@@ -8,11 +8,11 @@ STYLE.CSS FINAL - DISEÑO GLASSMORPHISM (ESTILO iOS/CRISTAL)
 /* Definición de Paleta de Colores (Variables) */
 /* ------------------------------------ */
 :root {
-    --color-principal: #002FA7; /* Naranja vibrante para elementos clave */
-    --color-secundario: #B9D8C2; /* Verde menta claro para acentos y enlaces */
+    --color-principal: #4666FF; /* Neon Azul vibrante para elementos clave */
+    --color-secundario: #CDB280; /* Dorado  */
     --color-fondo: #0d0d0d; /* Negro muy suave para el fondo principal (para que se note el blur) */
     --color-texto-claro: #f0f0f0; /* Blanco/Gris muy claro para texto principal */
-    --color-texto-oscuro: #5F7470; /* Gris verdoso oscuro para texto secundario */
+    --color-texto-oscuro: #f26419; /* naranja */
 }
 
 
