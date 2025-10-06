@@ -1,60 +1,117 @@
-/* Definimos variables de color para usarlas fácilmente en toda la página */
+/*
+===================================================================
+STYLE.CSS FINAL - DISEÑO GLASSMORPHISM (ESTILO iOS/CRISTAL)
+===================================================================
+*/
+
+/* ------------------------------------ */
+/* Definición de Paleta de Colores (Variables) */
+/* ------------------------------------ */
 :root {
-    --color-principal: #1b998b; /* Verde Azulado */
-    --color-secundario: #B9BAA3; /* Gris Claro / Tierra */
-    --color-fondo: #2d3047; /* Azul Marino Oscuro */
-    --color-texto-claro: #ffffff; /* Blanco */
-    --color-texto-oscuro: #2d3047; /* Texto principal (oscuro) */
+    --color-principal: #FEA82E; /* Naranja vibrante para elementos clave */
+    --color-secundario: #B9D8C2; /* Verde menta claro para acentos y enlaces */
+    --color-fondo: #0d0d0d; /* Negro muy suave para el fondo principal (para que se note el blur) */
+    --color-texto-claro: #f0f0f0; /* Blanco/Gris muy claro para texto principal */
+    --color-texto-oscuro: #5F7470; /* Gris verdoso oscuro para texto secundario */
 }
 
-/* 1. Estilo Básico para todo el cuerpo de la página */
+
+/* ------------------------------------ */
+/* 1. ESTILO BASE, TIPOGRAFÍA Y ANIMACIÓN */
+/* ------------------------------------ */
+
+/* Se aplica la fuente Poppins y la animación de entrada (FadeIn) */
 body {
-    font-family: Arial, sans-serif; /* Cambiamos la fuente para que se vea mejor */
-    background-color: var(--color-fondo); /* Usamos tu color más oscuro como fondo */
-    color: var(--color-texto-claro); /* El texto principal será blanco para contrastar */
-    line-height: 1.6; /* Hace el texto más legible */
-    padding: 20px;
+    /* Tipografía Poppins para el estilo cristalino */
+    font-family: 'Poppins', sans-serif;
+    
+    background-color: var(--color-fondo);
+    color: var(--color-texto-claro);
+    line-height: 1.6; /* Mayor espacio para mejor legibilidad */
+    padding: 0; /* Quitamos el padding global para que el menú ocupe todo el ancho */
+    
+    /* Aplicación de la animación de entrada */
+    animation: fadeIn 1s ease-out both; 
 }
 
-/* 2. Estilo de los encabezados (tu nombre) */
-h1 {
-    color: var(--color-principal); /* Usamos tu color principal para el nombre */
-    border-bottom: 2px solid var(--color-principal); /* Añadimos una línea debajo del nombre */
-    padding-bottom: 10px;
+/* Animación de entrada: el sitio aparece suavemente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* 3. Estilo de las secciones de proyectos */
-article {
-    background-color: #3e425f; /* Un tono ligeramente más claro que el fondo para que resalte */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-}
-
-/* 4. Estilo para los enlaces (como los links a tus proyectos) */
+/* Estilo para enlaces generales */
 a {
-    color: var(--color-secundario); /* Usamos tu color gris claro para los enlaces */
-    text-decoration: none; /* Quitamos el subrayado */
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: var(--color-principal); /* Cambia de color cuando pasas el ratón */
+    color: var(--color-principal);
     text-decoration: underline;
 }
 
-/* ==================================== */
-/* 1. Estilos de Navegación (Menú) */
-/* ==================================== */
+/* Estilo para párrafos y listas (efecto de sombra de texto sutil) */
+p, ul, li {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.15); 
+}
+
+/* ------------------------------------ */
+/* 2. ESTILO DE ENCABEZADOS Y TÍTULOS */
+/* ------------------------------------ */
+
+h1, h2, h3 {
+    font-weight: 700; /* Títulos gruesos y claros */
+    letter-spacing: -0.5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el contenedor de la cabecera (HEADER) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--color-fondo); /* Usamos el color de fondo para que las tarjetas floten sobre él */
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-weight: 800; /* Título principal muy audaz */
+    font-size: 3em;
+    color: var(--color-principal);
+    border-bottom: none;
+}
+
+.hero h2 {
+    font-weight: 300; /* Subtítulo delgado para contraste */
+    font-size: 1.6em;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------ */
+/* 3. MENÚ DE NAVEGACIÓN (GLASSMORPHISM) */
+/* ------------------------------------ */
 
 .main-nav {
     display: flex;
-    /* Cambia de 'center' a 'space-between' o 'flex-start' */
+    /* Separación de extremos para estilo de aplicación iOS */
     justify-content: space-between; 
     
+    /* Efecto de Vidrio Esmerilado (Glassmorphism) */
     background-color: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
-    padding: 15px 40px; /* Aumentamos el padding a los lados */
+    
+    padding: 15px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -63,9 +120,12 @@ a:hover {
 }
 
 .nav-item {
-    /* Eliminamos el margin lateral que ya no es necesario con el padding del nav */
-    margin: 0 5px; 
-    /* ... el resto del código nav-item ... */
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0; /* Reseteamos el margin que causaba el problema */
 }
 
 .nav-item:hover {
@@ -73,101 +133,81 @@ a:hover {
     color: var(--color-fondo);
 }
 
-/* ==================================== */
-/* 2. Estilos de la cabecera (HERO) */
-/* ==================================== */
 
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #3e425f; /* Un tono más claro para la cabecera */
-    margin-bottom: 40px;
+/* ------------------------------------ */
+/* 4. TARJETAS Y SECCIONES (GLASSMORPHISM) */
+/* ------------------------------------ */
+
+.content-section, .proyectos-section, .contacto-section {
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
 }
-
-.hero h1 {
-    font-size: 2.8em;
-    color: var(--color-principal);
-    border-bottom: none;
-}
-
-.hero h2 {
-    font-size: 1.5em;
-    color: var(--color-secundario);
-    margin-bottom: 20px;
-}
-
-/* ==================================== */
-/* 3. Diseño de Secciones (Tarjetas / Cards) */
-/* ==================================== */
 
 .content-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas para las tarjetas */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding: 20px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .card, .project-description, .project-summary {
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo muy transparente */
-    /* Aplicamos el desenfoque de nuevo */
+    /* Fondo muy transparente para el efecto de vidrio */
+    background-color: rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    
     padding: 30px;
-    border-radius: 20px; /* ¡Más redondeado, estilo iOS! */
-    /* Sombra y transición sutiles */
+    border-radius: 20px; /* Bordes redondeados al estilo iOS */
+    
+    /* Sombra y transición de levitación */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde claro sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px); /* Se eleva un poco más */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra más grande al pasar el ratón */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para los botones de acción */
-/* Para botones y enlaces (call-to-action-btn) */
+/* Estilo para botones de acción (call-to-action) */
 .call-to-action-btn {
-    /* ... código existente ... */
-    border-radius: 14px; /* Hacemos los botones más redondeados */
-    font-weight: 600; /* Un poco más de peso a la fuente */
-}
-
-.hero h1 {
-    font-weight: 800; /* Títulos más audaces */
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 14px; 
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .call-to-action-btn:hover {
     background-color: var(--color-secundario);
     color: var(--color-fondo);
-    transform: scale(1.05); /* Crece un 5% */
+    transform: scale(1.05);
 }
 
 .call-to-action-btn:active {
-    transform: scale(0.95); /* Se encoge un 5% al hacer clic (efecto 'presionado') */
+    transform: scale(0.95);
 }
 
-/* ==================================== */
-/* 4. Estilo de Proyectos Resumen */
-/* ==================================== */
-
-.proyectos-section {
-    padding: 40px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* ------------------------------------ */
+/* 5. PROYECTOS RESUMEN Y ANIMACIÓN DE DESLIZAMIENTO */
+/* ------------------------------------ */
 
 .project-summary {
-    /* ... código existente ... */
-    transition: transform 0.3s ease, border-left-width 0.3s ease; /* Transición suave */
-    cursor: pointer; /* Indica que es clickable */
+    margin-bottom: 25px;
+    /* La barra lateral para indicar que es un proyecto */
+    border-left: 5px solid var(--color-principal); 
+    transition: transform 0.3s ease, border-left-width 0.3s ease; 
+    cursor: pointer;
 }
 
 .project-summary:hover {
     transform: translateX(10px); /* Se desliza 10px a la derecha */
-    border-left-width: 10px; /* La barra lateral se hace más gruesa */
+    border-left-width: 10px; 
 }
 
 .status {
@@ -176,26 +216,15 @@ a:hover {
     font-size: 0.9em;
 }
 
-/* ==================================== */
-/* 5. Estilo de PÁGINA DE DETALLE (proyecto-1.html) */
-/* ==================================== */
+
+/* ------------------------------------ */
+/* 6. PÁGINA DE DETALLE DE PROYECTO */
+/* ------------------------------------ */
 
 .project-detail {
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
-}
-
-.project-detail h1 {
-    color: var(--color-principal);
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.project-status {
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--color-secundario);
+    padding: 0 20px;
 }
 
 .project-gallery {
@@ -208,14 +237,8 @@ a:hover {
 .project-gallery img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.project-description {
-    background-color: #3e425f;
-    padding: 30px;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .project-repo-btn {
@@ -225,45 +248,27 @@ a:hover {
     text-align: center;
 }
 
+/* ------------------------------------ */
+/* 7. ESTILOS RESPONSIVOS Y VIDEOS */
+/* ------------------------------------ */
+
 /* Media Query para una columna en móviles */
 @media (max-width: 768px) {
     .content-section {
         grid-template-columns: 1fr;
         padding: 20px;
     }
+    .main-nav {
+        padding: 15px 20px;
+    }
     .project-repo-btn {
         width: 100%;
     }
 }
 
-/* ==================================== */
-/* 3. Animación de Entrada (Fade-In) */
-/* ==================================== */
-
-/* Define la animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Empieza invisible */
-        transform: translateY(15px); /* Ligeramente desplazado hacia abajo */
-    }
-    to {
-        opacity: 1; /* Termina visible */
-        transform: translateY(0); /* Vuelve a su posición normal */
-    }
-}
-
-/* Aplica la animación al cuerpo de la página */
-body {
-    /* ... código body existente ... */
-    animation: fadeIn 1s ease-out both;
-}
-
-/* ==================================== */
-/* Estilo para Videos Propios */
-/* ==================================== */
-
+/* Estilo para videos propios (si usas <video>) */
 .video-propio {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
+    width: 100%; 
     height: auto;
     display: block;
     margin: 20px 0;
