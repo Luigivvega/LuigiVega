@@ -1,10 +1,26 @@
 /* Definimos variables de color para usarlas fácilmente en toda la página */
 :root {
-    --color-principal: #1b998b; /* Verde Azulado */
-    --color-secundario: #B9BAA3; /* Gris Claro / Tierra */
-    --color-fondo: #2d3047; /* Azul Marino Oscuro */
-    --color-texto-claro: #ffffff; /* Blanco */
-    --color-texto-oscuro: #2d3047; /* Texto principal (oscuro) */
+    --color-principal: #FEA82E; /* Naranja vibrante para elementos clave */
+    --color-secundario: #B9D8C2; /* Verde menta claro para acentos y enlaces */
+    --color-fondo: #040404; /* Negro profundo para el fondo principal */
+    --color-texto-claro: #FBFFFF; /* Blanco casi puro para texto principal sobre fondo oscuro */
+    --color-texto-oscuro: #5F7470; /* Gris verdoso para texto secundario o sutil */
+    --color-tarjeta-fondo: #1a1a1a; /* Un gris muy oscuro para el fondo de las tarjetas */
+    --color-hero-fondo: #2d3047; /* Un azul muy oscuro para el fondo del hero, para contraste con el negro puro */
+}
+
+/* Puedes ajustar también el color del fondo del header para que combine */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-hero-fondo); /* Usamos el nuevo color de fondo del hero */
+    margin-bottom: 40px;
+}
+
+/* También el color de fondo de las tarjetas */
+.card, .project-description, .project-summary {
+    background-color: var(--color-tarjeta-fondo); /* Fondo de tarjeta más oscuro que el fondo principal */
+    /* ... el resto de tu código para .card, .project-description, .project-summary ... */
 }
 
 /* 1. Estilo Básico para todo el cuerpo de la página */
