@@ -278,4 +278,48 @@ h1, h2, h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ELIMINANDO: Se quitan todas las reglas del Carrusel Estilo Apple TV */
+/* ------------------------------------ */
+/* DIVISOR DE LÍNEA (HR) - EFECTO CRISTAL DEGRADADO */
+/* ------------------------------------ */
+
+hr {
+    /* 1. Reset básico del elemento HR */
+    border: none;
+    height: 1px;
+    margin: 40px auto;
+    width: 80%; /* Ocupa el 80% del ancho */
+    max-width: 900px;
+    
+    /* 2. Degradado azul y blanco para el color */
+    /* La línea será un degradado sutil de azul-claro a blanco-claro y de vuelta */
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(70, 102, 255, 0.5) 15%, /* Azul Principal (más fuerte) */
+        rgba(128, 166, 235, 0.8) 50%, /* Dorado/Secundario (más claro en el centro) */
+        rgba(70, 102, 255, 0.5) 85%, /* Azul Principal de nuevo */
+        transparent 100%
+    );
+    
+    /* 3. Sombra interna para el efecto de relieve/vidrio */
+    /* Simula un brillo en la parte superior y una sombra en la inferior */
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.4), /* Sombra externa sutil */
+        inset 0 1px 1px rgba(255, 255, 255, 0.2); /* Brillo interno de cristal */
+    
+    /* 4. Animación sutil de respiración/brillo */
+    transition: all 0.5s ease-in-out;
+    animation: pulseGlow 5s infinite alternate; 
+}
+
+/* Animación de brillo sutil */
+@keyframes pulseGlow {
+    from {
+        opacity: 0.8;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        opacity: 1;
+        box-shadow: 0 1px 5px var(--color-principal), inset 0 1px 2px rgba(255, 255, 255, 0.4); /* Brillo más fuerte */
+    }
+}
