@@ -411,3 +411,10 @@ hr {
         width: 50%; 
     }
 }
+
+/* --- FORZAR JUSTIFICADO EN LA HISTORIA --- */
+.project-detail p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+}
