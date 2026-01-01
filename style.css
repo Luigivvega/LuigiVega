@@ -416,6 +416,23 @@ hr {
 .project-detail p {
     text-align: justify !important;
     text-justify: inter-word;
+
+    /* --- NUEVO: Contenedor para texto angosto (estilo blog) --- */
+.container-texto {
+    max-width: 800px; /* Esto limita el ancho máximo. Puedes probar 750px o 900px si prefieres */
+    margin-left: auto; /* Estos dos márgenes en 'auto' centran el bloque */
+    margin-right: auto;
+    padding-left: 20px; /* Un pequeño margen interno para que no se pegue al borde en celulares */
+    padding-right: 20px;
+}
+
+/* Opcional: Si quieres que los títulos principales del hero también estén centrados y angostos */
+.hero > h1, .hero > h2, .hero > p > strong {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Asegura que tomen el ancho y se centren */
+}
     hyphens: auto;
 }
 
