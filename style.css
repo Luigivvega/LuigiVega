@@ -58,9 +58,11 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Estilo para párrafos y listas (efecto de sombra de texto sutil) */
+/* Estilo para párrafos y listas (efecto de sombra de texto sutil y justificado) */
 p, ul, li {
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.15); 
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.15);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* ------------------------------------ */
