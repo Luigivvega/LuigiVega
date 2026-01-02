@@ -439,3 +439,22 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* Centrar específicamente el subtítulo del inicio */
+.hero p, .travel-hero p {
+    text-align: center !important;
+    text-justify: none !important;
+}
+
+/* Si usas la versión con imagen (travel-hero), esto asegura que todo el bloque se alinee al medio */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Los párrafos largos de tu historia sí pueden quedarse justificados si quieres, 
+   pero si quieres centrar solo el primero, usa este: */
+.hero-content p:first-of-type {
+    text-align: center;
+}
