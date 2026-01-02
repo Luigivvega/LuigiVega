@@ -229,7 +229,7 @@ h1, h2, h3 {
 
 .project-detail {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -416,13 +416,6 @@ hr {
     }
 }
 
-/* 1. Mantenemos el estilo de lectura para los viajes (página de historia) */
-.project-detail {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* 2. Hacemos que el Index (Hero) sea más ancho y espacioso */
 .hero .container-texto {
     max-width: 1200px; /* Cambia 900 por 1200 o el número que prefieras */
@@ -431,12 +424,18 @@ hr {
     padding: 0 40px; /* Un poco más de aire a los lados */
 }
 
-/* 3. También ajustamos las tarjetas del Index para que aprovechen el ancho */
-.content-section {
-    max-width: 1200px; /* Para que las cajas de Misión y Enfoque se alineen con el Hero */
-    margin: 0 auto 40px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+/* ------------------------------------------------------------- */
+/* AJUSTES SOLICITADOS: LETRA MÁS GRANDE Y CLASE DE IMAGEN MEDIA */
+/* ------------------------------------------------------------- */
+
+/* Aumentamos el tamaño base de la letra de todo el sitio */
+body {
+    font-size: 1.1rem; /* Aproximadamente 17.6px (antes era 16px) */
 }
 
+/* Nueva clase para que las fotos no se vean gigantes (al 70% del ancho) */
+.travel-media--medium {
+    max-width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
