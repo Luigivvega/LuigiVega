@@ -416,28 +416,27 @@ hr {
     }
 }
 
-/* --- BLOQUE CORREGIDO --- */
-.project-detail p {
-    text-align: justify !important;
-    text-justify: inter-word;
-    hyphens: auto;
+/* 1. Mantenemos el estilo de lectura para los viajes (página de historia) */
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Esta es la clase que unifica el ancho de tu Index con el de Viajes */
-.container-texto, .project-detail {
-    max-width: 900px; /* Aquí igualamos el ancho a 900px */
-    margin-left: auto; 
+/* 2. Hacemos que el Index (Hero) sea más ancho y espacioso */
+.hero .container-texto {
+    max-width: 1200px; /* Cambia 900 por 1200 o el número que prefieras */
+    margin-left: auto;
     margin-right: auto;
-    padding-left: 20px; 
-    padding-right: 20px;
-    box-sizing: border-box; 
+    padding: 0 40px; /* Un poco más de aire a los lados */
 }
 
-.frase-destacada {
-    border-left: 4px solid var(--color-principal);
-    padding: 10px 20px;
-    background: rgba(70, 102, 255, 0.1);
-    font-style: italic;
-    margin: 30px 0;
+/* 3. También ajustamos las tarjetas del Index para que aprovechen el ancho */
+.content-section {
+    max-width: 1200px; /* Para que las cajas de Misión y Enfoque se alineen con el Hero */
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
