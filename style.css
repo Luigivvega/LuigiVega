@@ -458,3 +458,21 @@ body {
 .hero-content p:first-of-type {
     text-align: center;
 }
+
+/* --- CORRECCIÓN DE CENTRADO PARA EL HERO --- */
+
+/* Forzamos el centrado de los títulos y el subtítulo en el inicio */
+.hero h1, .hero h2, .hero p strong, 
+.travel-hero h1, .travel-hero h2, .travel-hero p strong {
+    display: block; /* Hace que se comporte como un bloque completo */
+    text-align: center !important; /* El !important le gana a cualquier otra regla */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Si quieres que los párrafos largos de abajo sigan justificados, 
+   pero el primer párrafo de bienvenida esté centrado, usa esto: */
+.hero-content p {
+    text-align: justify; /* Mantiene tu estilo de lectura */
+}
